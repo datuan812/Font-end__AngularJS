@@ -1,0 +1,129 @@
+<section style="background-color: #f5f5f5">
+  <br />
+  <div class="container mx-auto" style="background-color: #fff">
+    <a type="button" class="btn btn-light position-relative float-end mt-3">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span
+        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+      >
+        {{ countItemsInCart() }}
+        <span class="visually-hidden">unread messages</span>
+      </span>
+    </a>
+    <h1><span class="header-content">Giỏ Hàng</span></h1>
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr class="table-warning">
+          <th>#</th>
+          <th>Hình ảnh</th>
+          <th>Tên</th>
+          <th>Số lượng</th>
+          <th>Đơn giá</th>
+          <th>Tổng tiền</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in cart">
+          <td>{{$index +1}}</td>
+          <td>
+            <img src="{{item.images || item.images[0]}}" width="120px" alt="" />
+          </td>
+          <td>{{ item.name }}</td>
+          <td>
+            <input
+              type="number"
+              ng-model="item.quantity"
+              min="1"
+              ng-change="updateSL(item)"
+            />
+          </td>
+          <td>{{ item.list_price | number:0 }} ₫</td>
+          <td>{{ item.list_price * item.quantity | number:0 }} ₫</td>
+          <td>
+            <a
+              class="btn btn-outline-danger"
+              style="text-decoration: none"
+              href="#gio-hang/delete/{{item.id}}"
+              ng-click="deleteGH($event, $index)"
+              ><i class="fa-solid fa-trash"></i
+            ></a>
+          </td>
+        </tr>
+        <tr class="table-secondary">
+          <td colspan="6" style="text-align: right">
+            <strong>Tổng thành tiền: </strong>
+          </td>
+          <td
+            class="label label-important"
+            style="display: block; background-color: green; color: white"
+          >
+            <strong>{{ sum() | number:0 }}₫</strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="float-end">
+      <button ng-click="checkout()" class="edit-button">
+        <i
+          class="fa-sharp fa-solid fa-cart-shopping"
+          style="color: #ffffff"
+        ></i>
+      </button>
+    </div>
+    <br />
+    <div class="" ng-show="formThanhToan">
+      <h1><span class="header-content">Thông Tin Thanh Toán</span></h1>
+
+      <form>
+        <div class="row">
+          <div class="col-sm-12 col-md-3"></div>
+          <div class="add">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Fullname</span>
+                <input
+                  type="text"
+                  id="name"
+                  ng-model="pay.fullname"
+                  placeholder="Enter your full name:"
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input
+                  type="email"
+                  id="email"
+                  ng-model="pay.email"
+                  placeholder="Enter your email:"
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Your Phone:</span>
+                <input
+                  type="text"
+                  id="phone"
+                  ng-model="pay.phone"
+                  placeholder="Enter your phone:"
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Address</span>
+                <textarea
+                  type="text"
+                  id="address"
+                  ng-model="pay.address"
+                  placeholder="Enter your address:"
+                ></textarea>
+              </div>
+            </div>
+            <div class="button">
+              <button ng-click="thanhtoan()">Thanh toán</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

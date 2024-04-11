@@ -1,0 +1,177 @@
+<section style="background-color: #f5f5f5">
+  <div class="container mx-auto">
+    <div class="row p-3">
+      <div class="col-sm-12 col-md-3 col-lg-3">
+        <div class="list-group" style="background-color: white">
+          <div class="card-header p-3">
+            <b class="p-3">Quản Lý</b>
+          </div>
+          <a
+            class="list-group-item list-group-item-action text-secondary"
+            aria-current="true"
+            style="text-decoration: none"
+            href="#trangchu"
+          >
+            Trang chủ
+          </a>
+          <a
+            class="list-group-item list-group-item-action text-secondary"
+            aria-current="true"
+            style="text-decoration: none"
+            href="#admin"
+          >
+            Quản Lý Sản Phẩm
+          </a>
+          <a
+            class="list-group-item list-group-item-action text-secondary"
+            aria-current="true"
+            style="text-decoration: none"
+            href="#admin/add"
+          >
+            Thêm sản phẩm
+          </a>
+        </div>
+
+        <div class="hehe">
+          <div class="gallery">
+            <img
+              src="https://salt.tikicdn.com/cache/750x750/ts/product/d8/ee/91/52a587e93a60ec69cb233696831f3036.png.webp"
+              alt="One"
+            />
+            <img
+              src="https://salt.tikicdn.com/cache/750x750/ts/product/c9/b4/05/8485b93f6916fd447e534216f7b64bcc.jpg.webp"
+              alt="Two"
+            />
+            <img
+              src="https://salt.tikicdn.com/cache/750x750/ts/product/b2/01/d3/558095f027444a6b9a1e50d483f48e9c.jpg.webp"
+              alt="Three"
+            />
+            <img
+              src="https://salt.tikicdn.com/cache/750x750/ts/product/f5/f8/63/3af8234a91118f5df5b4ecc951c744fc.jpg.webp"
+              alt="Four"
+            />
+          </div>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br />
+        <div class="box12 ms-5">
+          <span style="--i: 1"
+            ><img
+              src="https://salt.tikicdn.com/cache/750x750/ts/product/09/2b/e4/e220a9a28a35a7c6ed3336e89c09178b.jpg.webp"
+              alt=""
+          /></span>
+          <span style="--i: 2"
+            ><img
+              src="https://salt.tikicdn.com/cache/750x750/ts/product/6a/da/bb/185d27fe442a1668cf0196c1b82c87eb.jpg.webp"
+              alt=""
+          /></span>
+          <span style="--i: 3"
+            ><img
+              src="https://salt.tikicdn.com/cache/750x750/ts/product/a1/ef/4f/0b39e40dca3827604c8bc4e867cc9423.jpg.webp"
+              alt=""
+          /></span>
+          <span style="--i: 4"
+            ><img
+              src="https://salt.tikicdn.com/cache/750x750/ts/product/b2/02/d8/216624ab5e54d0f15d4ac3bfb6e968a7.jpg.webp"
+              alt=""
+          /></span>
+          <span style="--i: 5"
+            ><img
+              src="https://salt.tikicdn.com/cache/750x750/ts/product/6a/ec/d6/0b81905184aead6c51b59c6796a1ddf7.jpg.webp"
+              alt=""
+          /></span>
+          <span style="--i: 6"
+            ><img
+              src="https://salt.tikicdn.com/cache/750x750/ts/product/df/36/d9/b067ce3b894d2d1c3192ea78682f690b.jpg.webp"
+              alt=""
+          /></span>
+          <span style="--i: 7"
+            ><img
+              src="https://salt.tikicdn.com/cache/750x750/ts/product/d9/c8/01/b519b25ad3ffda25420263f404a790f8.jpg.webp"
+              alt=""
+          /></span>
+          <span style="--i: 8"
+            ><img
+              src="https://salt.tikicdn.com/cache/750x750/ts/product/30/74/bd/e8883d02bba0ca7c232ebde1672462b6.jpg.webp"
+              alt=""
+          /></span>
+        </div>
+        <br /><br /><br /><br /><br /><br />
+      </div>
+
+      <div
+        class="col-12 col-sm-12 col-md-9 col-lg-9"
+        style="background-color: #fff"
+      >
+        <div class="card-header p-1">
+          <b class="p-3 float-start">Thông Tin Sản Phẩm</b>
+          <form class="d-flex justify-content-end w-50 h-25 mt-2" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              ng-model="searchTerm"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn btn-outline-light"
+              type="submit"
+              ng-click="search()"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+        <table class="table table-hover">
+          <thead>
+            <tr class="table-warning">
+              <th scope="col">STT</th>
+              <th scope="col">Hình ảnh</th>
+              <th scope="col">Tên sách</th>
+              <th scope="col">Giá bán</th>
+              <th scope="col">Mô tả</th>
+              <th width="20%" scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="product in sachs">
+              <td>{{$index + 1}}</td>
+              <td>
+                <img
+                  src="{{product.images || product.images[0]}}"
+                  alt=""
+                  width="120px"
+                />
+              </td>
+              <td>{{product.name}}</td>
+              <td>{{product.list_price | number:0}}₫</td>
+              <td>{{product.short_description | limitTo:50}}...</td>
+
+              <td>
+                <a
+                  class="btn btn-outline-danger"
+                  style="text-decoration: none"
+                  href="#detail/{{product.id}}"
+                  ><i class="fa-sharp fa-solid fa-circle-info"></i
+                ></a>
+                <a
+                  class="btn btn-outline-danger"
+                  style="text-decoration: none"
+                  s
+                  href="#admin/update/{{product.id}}"
+                  ><i class="fa-regular fa-pen-to-square"></i
+                ></a>
+                <a
+                  class="btn btn-outline-danger"
+                  style="text-decoration: none"
+                  href="#sach/delete/{{product.id}}"
+                  ng-click="deleteSP($event,$index)"
+                  ><i class="fa-solid fa-trash"></i
+                ></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

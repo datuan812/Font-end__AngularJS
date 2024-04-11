@@ -1,0 +1,460 @@
+<section class="bg-body-tertiary p-1">
+  <div class="container mx-auto">
+    <nav aria-label="breadcrumb ">
+      <ol class="breadcrumb pt-2">
+        <li class="breadcrumb-item active">Trang chủ</li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Nhà sách tiki
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Sách tiếng việt
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Sách kỹ năng sống
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Sách tư duy - Kỹ năng sống
+        </li>
+        <li class="breadcrumb-item" aria-current="page">
+          Càng Kỷ Luật, Càng Tự Do
+        </li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section class="mb-5">
+  <div class="container mx-auto">
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <img src="{{sp.images || sp.images[0]}}" class="w-100" alt="" />
+        <div class="row p-3">
+          <div class="col-sm-12 col-md-4">
+            <img src="{{sp.images || sp.images[1]}}" class="w-100" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-8">
+        <div class="d-flex">
+          <p>Tác giả:</p>
+          <p style="color: #0d5cb6" class="ms-1">Ca Tây</p>
+          <p class="ms-4">Đứng thứ 13 trong</p>
+          <p style="color: #0d5cb6" class="ms-1">
+            Top 1000 Sách tư duy - Kỹ năng sống
+          </p>
+          <p style="color: #0d5cb6" class="ms-2">bán chạy tháng này</p>
+        </div>
+        <h3>{{sp.name}}</h3>
+        <div class="d-flex">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <p class="ms-3" style="color: #747474">(Xem 2942 đánh giá)</p>
+          <p style="color: #747474" class="ms-3">
+            | {{sp.quantity_sold.text }}
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-md-8 col-sm-8">
+            <div class="bg-body-tertiary d-flex p-3">
+              <h3 style="color: #f43f4b; margin-bottom: 50px">
+                {{sp.list_price | number:0}} ₫
+              </h3>
+              <p style="color: #747474; margin-top: 10px" class="ms-2">
+                109.000 ₫
+              </p>
+              <p
+                style="
+                  height: 25px;
+                  border-radius: 4px;
+                  border: 2px solid #f43f4b;
+                  margin-top: 10px;
+                  color: #f43f4b;
+                "
+                class="ms-2"
+              >
+                -23%
+              </p>
+            </div>
+            <hr />
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4"></div>
+        </div>
+        <div class="mt-4">
+          <h5>Số Lượng</h5>
+          <button type="button" class="btn btn-light">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <button type="button" class="btn btn-light">0</button>
+          <button type="button" class="btn btn-light">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <button
+          class="w-25 p-3 mt-3"
+          style="
+            border-radius: 5px;
+            color: white;
+            background-color: #f43f4b;
+            border: white;
+          "
+        >
+          Chọn mua
+        </button>
+        <hr class="mt-5" />
+      </div>
+    </div>
+  </div>
+</section>
+<br />
+<section>
+  <div class="container">
+    <p style="font-size: 20px" class="mt-4">Sản Phẩm Tương Tự</p>
+    <div class="row">
+      <div class="col-lg-2 col-md-4 col-sm-6">
+        <div class="card">
+          <img src="/assets/a1.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h6 class="card-title">TƯ DUY NGƯỢC - Nguyễn Anh Dũng</h6>
+            <div class="d-flex">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              |
+              <p class="ms-2 mt-1" style="font-size: 12px; color: #747474">
+                Đã bán 54
+              </p>
+            </div>
+            <div class="d-flex">
+              <h5>67.000 ₫</h5>
+              <p
+                style="
+                  height: 25px;
+                  border-radius: 4px;
+                  border: 2px solid #f43f4b;
+                  color: #f43f4b;
+                "
+                class="ms-2"
+              >
+                -32%
+              </p>
+            </div>
+            <img src="/assets/giare.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6">
+        <div class="card">
+          <img src="/assets/a2.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h6 class="card-title">Đời Ngắn Đừng Ngủ Dài (Tái Bản)</h6>
+            <div class="d-flex">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              |
+              <p class="ms-2 mt-1" style="font-size: 12px; color: #747474">
+                Đã bán 1000+
+              </p>
+            </div>
+            <div class="d-flex">
+              <h5>50.000 ₫</h5>
+              <p
+                style="
+                  height: 25px;
+                  border-radius: 4px;
+                  border: 2px solid #f43f4b;
+                  color: #f43f4b;
+                "
+                class="ms-2"
+              >
+                -33%
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6">
+        <div class="card">
+          <img src="/assets/a3.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h6 class="card-title">Thiên Nga Đen (Tái Bản 2020)</h6>
+            <div class="d-flex">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              |
+              <p class="ms-2 mt-1" style="font-size: 12px; color: #747474">
+                Đã bán 141
+              </p>
+            </div>
+            <div class="d-flex">
+              <h5>194.300 ₫</h5>
+              <p
+                style="
+                  height: 25px;
+                  border-radius: 4px;
+                  border: 2px solid #f43f4b;
+                  color: #f43f4b;
+                "
+                class="ms-2"
+              >
+                -32%
+              </p>
+            </div>
+            <img src="/assets/giare.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6">
+        <div class="card">
+          <img src="/assets/a4.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h6 class="card-title">
+              Sách: 1 Ngày Bằng 48 Giờ - Sổ tay Quản Lí Thời Gian Hiệu Quả
+            </h6>
+            <div class="d-flex">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              |
+              <p class="ms-2 mt-1" style="font-size: 12px; color: #747474">
+                Đã bán 601
+              </p>
+            </div>
+            <div class="d-flex">
+              <h5>44.000 ₫</h5>
+              <p
+                style="
+                  height: 25px;
+                  border-radius: 4px;
+                  border: 2px solid #f43f4b;
+                  color: #f43f4b;
+                "
+                class="ms-2"
+              >
+                -39%
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6">
+        <div class="card">
+          <img src="/assets/a5.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h6 class="card-title">
+              Hãy Khiến Tương Lai Biết Ơn Vì Hiện Tại BạnCố Gắng Hết Mình
+            </h6>
+            <div class="d-flex">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              |
+              <p class="ms-2 mt-1" style="font-size: 12px; color: #747474">
+                Đã bán 359
+              </p>
+            </div>
+            <div class="d-flex">
+              <h5>69.300 ₫</h5>
+              <p
+                style="
+                  height: 25px;
+                  border-radius: 4px;
+                  border: 2px solid #f43f4b;
+                  color: #f43f4b;
+                "
+                class="ms-2"
+              >
+                -30%
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6">
+        <div class="card">
+          <img src="/assets/a6.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h6 class="card-title">
+              Đừng Cố Làm Người Tốt Trong Mắt Tất Cả Mọi Người
+            </h6>
+            <div class="d-flex">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              |
+              <p class="ms-2 mt-1" style="font-size: 12px; color: #747474">
+                Đã bán 730
+              </p>
+            </div>
+            <div class="d-flex">
+              <h5>89.000 ₫</h5>
+              <p
+                style="
+                  height: 25px;
+                  border-radius: 4px;
+                  border: 2px solid #f43f4b;
+                  color: #f43f4b;
+                "
+                class="ms-2"
+              >
+                -18%
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p style="font-size: 20px" class="mt-5">Thông Tin Chi Tiết</p>
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-6 bg-dark-subtle">
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link text-black" aria-current="page" href="#"
+              >Công ty phát hành</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#">Ngày xuất bản</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#">Kích thước</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#">Dịch giả</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#">Loại bìa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#">Số trang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#">Nhà xuất bản</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link text-black" aria-current="page" href="#"
+              >Bloom Books</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black bg-body-tertiary" href="#"
+              >2020-09-01 00:00:00</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#">14.5 x 20 cm</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black bg-body-tertiary" href="#"
+              >Tuyết Mai</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#">Bìa mềm</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black bg-body-tertiary" href="#">288</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#">Nhà Xuất Bản Thế Giới</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p style="font-size: 20px" class="mt-5">Mô Tả Sản Phẩm</p>
+    <div class="row">
+      <div class="col-lg-9 col-md-9 col-sm-9">
+        <p>
+          KỶ LUẬT vốn là ván cờ bạn phải tự đấu với chính mình. Thắng - bạn sẽ
+          có được “bản năng của người mạnh mẽ nhất”, đó là sự tự kiểm soát bản
+          thân. Thua - bạn mãi sống trong cảm giác tạm bợ, nuối tiếc. Càng dễ
+          dàng dung túng cho những thói quen trì hoãn bao nhiêu, cuộc sống của
+          bạn sẽ đi càng nhanh tới sự mất kiểm soát và thiếu quy hoạch bấy
+          nhiêu.
+        </p>
+        <p>
+          Hãy kiên trì đặt ra yêu cầu cao với bản thân, từ chối sự mê hoặc của
+          thói tùy tiện đồng thời thiết lập cho mình những thói quen tốt trong
+          hành vi thường ngày. Sự nỗ lực sẽ luôn được đền đáp xứng đáng nếu bạn
+          biết cách đầu tư công sức và thời gian. Bởi một ngày nào đó trong
+          tương lai, những gì bạn làm sẽ phản chiếu đầy đủ trên chính con người
+          và cuộc đời của bạn.
+        </p>
+        <p>
+          CÀNG KỶ LUẬT, CÀNG TỰ DO - Mong rằng tại thời điểm kết thúc hành trình
+          với cuốn sách, bạn đã là một phiên bản khác kỷ luật hơn, nhưng tự do
+          hơn.
+        </p>
+        <p>Một vài trích dẫn:</p>
+        <p>
+          “Bạn cần phải biết rằng tình yêu là hoa thêu trên gấm. Có thì tốt,
+          không có cũng chẳng sao, thực sự không đáng để bạn vì nó mà từ bỏ sự
+          nghiệp, từ bỏ cơ hội thăng tiến thậm chí là từ bỏ cả cuộc đời vinh hoa
+          sau này.”
+        </p>
+        <p>
+          “Những người trưởng thành như chúng ta nên nhìn cuộc sống rộng hơn một
+          chút, ghen có thể có, tức giận có thể có. Thế nhưng, có những cảm xúc
+          chỉ nên lướt qua trong lòng, ngày hôm sau ngủ dậy hãy để nó rời đi
+          cùng với đêm đen mới là cách lựa chọn tốt nhất.”
+        </p>
+        <p>
+          “Mỗi người đều có kinh nghiệm sống không giống nhau, yêu cầu không
+          giống nhau. Điều giống nhau là chúng ta đều nên tìm mọi cách trau dồi
+          khả năng của bản thân để sống tốt cuộc đời này.”
+        </p>
+        <p>
+          Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bên cạnh
+          đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao hàng mà có thể
+          phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng
+          kềnh, thuế nhập khẩu (đối với đơn hàng giao từ nước ngoài có giá trị
+          trên 1 triệu đồng).....
+        </p>
+        <div style="text-align: center">
+          <button
+            class="btn btn-primary"
+            style="background-color: white; color: blue; border-radius: 5px"
+          >
+            Xem Thêm Nội Dung
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
